@@ -7,14 +7,16 @@
 }
 
 body {
-    @include background;
-    background: $primary-color;
-    color:set-text-color($primary-color);
-    height:100%;
-    margin:0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height:1.5;
+  @include background;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
+
+   
 
 //Headings
 h1,
@@ -54,10 +56,10 @@ min-height: calc(100vh - 60px);
 
     a{
         padding:0.4rem;
+        @include easeOut;
 
         &:hover{
             color: $secondary-color;
-            @include easeOut();
         }
     }
   }
@@ -66,8 +68,6 @@ min-height: calc(100vh - 60px);
     h1{
         margin-top:20vh;
     }
-
-
   }
  }   
  .about-info {
@@ -85,27 +85,25 @@ min-height: calc(100vh - 60px);
     border: $secondary-color 3px solid;
    }
   
-   bio-image {
+   bio {
     grid-area: bio;
     font-size: 1.5rem;
   
    }
   
    .job-1 {
-    grid-areas:job1
+    grid-area:job1;
    }
   
-   .job-1 {
-    grid-areas:job1
-   }
-  
-   .job-2 {
-    grid-areas:job2
+   .job-2{
+    grid-area:job2;
    }
   
    .job-3 {
-    grid-areas:job3
+    grid-area:job3;
    }
+  
+   
   
   
    .job {
@@ -119,7 +117,7 @@ min-height: calc(100vh - 60px);
  .projects{
   display: grid;
   grid-gap:0.7rem;
-  grid-temlpate-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
 
   img {
     width: 100%;
@@ -128,7 +126,7 @@ min-height: calc(100vh - 60px);
 
     &:hover{
       opacity:0.5;
-      border-color: &secondary-color;
+      border-color: $secondary-color;
       @include easeOut;
     }
   }
@@ -169,7 +167,7 @@ min-height: calc(100vh - 60px);
   border:0;
   margin-bottom: 0.3rem;
   &:hover {
-    background: &secondary-color;
+    background: $secondary-color;
     color: set-text-color
     ($secondary-color);
   }
